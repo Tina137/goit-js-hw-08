@@ -95,5 +95,7 @@ containerForImages.addEventListener("click", (e) => {
   const instance = basicLightbox.create(`
 	<img src=${e.target.dataset.source} width="800" height="600">
 `);
-  instance.show();
+  if (e.target.dataset.source != undefined) {
+    instance.show();
+  }
 });
